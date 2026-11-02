@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: platform-lab-settings
+data:
+  environment: lab
+  managed-by: argocd
