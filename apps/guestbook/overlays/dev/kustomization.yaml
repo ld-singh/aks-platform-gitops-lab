@@ -3,8 +3,6 @@ kind: Kustomization
 namespace: guestbook-dev
 resources:
   - ../../base
-replicas:
-  - name: guestbook-ui
-    count: 1
+  - hpa.yaml
 patches:
   - path: resources-patch.yaml

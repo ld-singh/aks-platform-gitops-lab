@@ -28,3 +28,6 @@ spec:
       destination:
         server: https://kubernetes.default.svc
         namespace: 'guestbook-{{.env}}'
+      syncPolicy:
+        syncOptions:
+          - RespectIgnoreDifferences=true  
