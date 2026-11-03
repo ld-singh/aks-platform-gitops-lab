@@ -6,3 +6,5 @@ resources:
 replicas:
   - name: guestbook-ui
     count: 1
+patches:
+  - path: resources-patch.yaml
