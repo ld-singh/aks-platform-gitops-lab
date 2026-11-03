@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: guestbook-nonprod
+  namespace: argocd
+spec:
+  description: Restricted Guestbook non-production deployments
+
+  sourceRepos:
+    - https://github.com/ld-singh/aks-platform-gitops-lab.git
+
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: guestbook-dev
+    - server: https://kubernetes.default.svc
+      namespace: guestbook-uat
+
+  clusterResourceWhitelist: []
+
+  namespaceResourceWhitelist:
+    - group: apps
+      kind: Deployment
+    - group: ""
+      kind: Service
+    - group: ""
+      kind: ConfigMap
