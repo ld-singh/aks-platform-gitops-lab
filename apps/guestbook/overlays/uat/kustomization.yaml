@@ -7,3 +7,5 @@ resources:
 replicas:
   - name: guestbook-ui
     count: 2
+patches:
+  - path: topology-patch.yaml    
