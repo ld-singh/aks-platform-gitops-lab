@@ -25,4 +25,6 @@ spec:
     - group: ""
       kind: ConfigMap
     - group: autoscaling
-      kind: HorizontalPodAutoscaler  
+      kind: HorizontalPodAutoscaler
+    - group: policy
+      kind: PodDisruptionBudget    

@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: guestbook-uat
 resources:
   - ../../base
+  - pdb.yaml
 replicas:
   - name: guestbook-ui
     count: 2
