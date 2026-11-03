@@ -24,3 +24,5 @@ spec:
       kind: Service
     - group: ""
       kind: ConfigMap
+    - group: autoscaling
+      kind: HorizontalPodAutoscaler  
