@@ -16,3 +16,5 @@ spec:
           labelSelector:
             matchLabels:
               app: guestbook-ui
+          matchLabelKeys:
+            - pod-template-hash  
