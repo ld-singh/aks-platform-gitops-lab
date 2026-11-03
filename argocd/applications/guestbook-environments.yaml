@@ -18,7 +18,7 @@ spec:
     metadata:
       name: 'guestbook-{{.env}}'
     spec:
-      project: default
+      project: guestbook-nonprod
 
       source:
         repoURL: https://github.com/ld-singh/aks-platform-gitops-lab.git
@@ -28,7 +28,3 @@ spec:
       destination:
         server: https://kubernetes.default.svc
         namespace: 'guestbook-{{.env}}'
-
-      syncPolicy:
-        syncOptions:
-          - CreateNamespace=true
